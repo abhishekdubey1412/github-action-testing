@@ -5,4 +5,15 @@ run-name: "this is my first action workflow runner"
 on:
   push:
     branches:
-      - main
+      - main  # You can change this to another branch if needed.
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest  # Defines the operating system for the job (this could be ubuntu, macos, or windows)
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3  # This checks out the repository code so the workflow can access it.
+        
+      - name: Run a simple script
+        run: echo "Hello, GitHub Actions!"
