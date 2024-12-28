@@ -1,0 +1,8 @@
+name: GitHub Action Testion
+
+run-name: "this is my first action workflow runner"
+
+on:
+  push:
+    branches:
+      - main
